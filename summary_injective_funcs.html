@@ -541,15 +541,17 @@ Why this structure? The lesson moves from specific algebraic manipulation to abs
     }
 
     const parabolaChart = new Chart(parabolaCtx, {
-        type: 'line',
+        type: 'scatter',
         data: {
             datasets: [
                 {
                     label: 'y = x²',
                     data: generateParabola(false),
                     borderColor: '#dc2626', // Red initially
+                    backgroundColor: 'rgba(220, 38, 38, 0.1)',
                     borderWidth: 2,
                     pointRadius: 0,
+                    showLine: true,
                     fill: false
                 },
                 {
@@ -559,14 +561,17 @@ Why this structure? The lesson moves from specific algebraic manipulation to abs
                     borderWidth: 1,
                     borderDash: [5, 5],
                     pointRadius: 0,
+                    showLine: true,
                     hidden: true
                 },
                 {
                     label: 'y = √x (Inversa)',
                     data: [],
                     borderColor: '#10b981', // Emerald
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
                     borderWidth: 2,
                     pointRadius: 0,
+                    showLine: true,
                     hidden: true
                 }
             ]
