@@ -1,0 +1,39 @@
+{
+  "topics": [
+    {
+      "slug": "algebra-explorer",
+      "title": "Esploratore Interattivo di Algebra",
+      "category": "math",
+      "description": "Analisi delle equazioni di primo grado, prodotti notevoli e frazioni algebriche con visualizzazioni 3D.",
+      "relatedTopics": ["conical-inverse-functions", "injective-functions"]
+    },
+    {
+      "slug": "conical-inverse-functions",
+      "title": "Circonferenza Parametrica e Inversione",
+      "category": "math",
+      "description": "Studio della circonferenza parametrica e inversione delle funzioni con grafici interattivi.",
+      "relatedTopics": ["algebra-explorer", "injective-functions"]
+    },
+    {
+      "slug": "injective-functions",
+      "title": "Funzioni Iniettive e Suriettive",
+      "category": "math",
+      "description": "Definizioni e proprietà delle funzioni iniettive, suriettive e biiettive con esempi visivi.",
+      "relatedTopics": ["conical-inverse-functions", "algebra-explorer"]
+    },
+    {
+      "slug": "orbital-mechanics",
+      "title": "Meccanica Orbitale e Leggi di Keplero",
+      "category": "physics",
+      "description": "Le tre leggi di Keplero, la gravitazione universale di Newton e gli esercizi pratici sulla forza gravitazionale.",
+      "relatedTopics": ["thermodynamics"]
+    },
+    {
+      "slug": "thermodynamics",
+      "title": "Termodinamica: Calore e Temperatura",
+      "category": "physics",
+      "description": "Concetti fondamentali di calore, temperatura, equilibrio termico e cambiamenti di stato con calcolatori interattivi.",
+      "relatedTopics": ["orbital-mechanics"]
+    }
+  ]
+}

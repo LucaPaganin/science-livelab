@@ -1,0 +1,158 @@
+---
+title: "Thermo.Lab"
+description: "Concetti fondamentali di calore, temperatura, equilibrio termico e cambiamenti di stato con calcolatori interattivi."
+category: "physics"
+topics: ["termodinamica", "calore", "temperatura"]
+difficulty: "intermediate"
+lastUpdated: "2026-02-16"
+color: "red"
+icon: "🌡️"
+navSections:
+  - id: "intro"
+    label: "Introduzione"
+  - id: "concepts"
+    label: "Concetti"
+  - id: "exercise1"
+    label: "Es. 1: H₂O"
+  - id: "exercise2"
+    label: "Es. 2: Ferro"
+  - id: "exercise3"
+    label: "Es. 3: Ghiaccio"
+  - id: "summary"
+    label: "Riepilogo"
+---
+
+<section id="intro" class="mb-16 max-w-4xl mx-auto">
+<div class="bg-white rounded-2xl shadow-sm p-8 border-l-4 border-red-600">
+
+## Termodinamica: Calore e Temperatura
+
+Benvenuto in questa lezione interattiva sulla termodinamica. Esploreremo i concetti fondamentali di **temperatura**, **calore**, **equilibrio termico** e i **cambiamenti di stato**.
+
+Attraverso tre esercizi pratici, imparerai a calcolare il calore necessario per:
+- Riscaldare l'acqua da temperatura ambiente a ebollizione
+- Portare il ferro fino alla fusione
+- Trasformare il ghiaccio in acqua passando attraverso il punto di fusione
+
+</div>
+</section>
+
+<section id="concepts" class="mb-20 max-w-5xl mx-auto">
+
+## 01. Concetti Fondamentali
+
+Prima di risolvere gli esercizi, rivediamo i concetti chiave della termodinamica.
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-2xl">🌡️</div>
+<h3 class="text-lg font-bold text-stone-800">Temperatura</h3>
+</div>
+<p class="text-sm text-stone-600">Grandezza fisica che indica quanto è caldo o freddo un corpo. Si misura in Celsius (°C), Kelvin (K) o Fahrenheit (°F).</p>
+</div>
+
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">⚖️</div>
+<h3 class="text-lg font-bold text-stone-800">Equilibrio Termico</h3>
+</div>
+<p class="text-sm text-stone-600">Due corpi a temperature diverse, messi a contatto, raggiungono una temperatura intermedia comune (principio zero della termodinamica).</p>
+</div>
+
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-2xl">🔥</div>
+<h3 class="text-lg font-bold text-stone-800">Calore (Q)</h3>
+</div>
+<p class="text-sm text-stone-600">Energia in transito che si trasmette per differenza di temperatura. Si misura in Joule (J) o calorie (cal).</p>
+<div class="font-mono bg-stone-50 p-2 rounded text-sm text-center mt-2">$$Q = C \times m \times \Delta T$$</div>
+</div>
+
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">💧</div>
+<h3 class="text-lg font-bold text-stone-800">Calore Specifico (C)</h3>
+</div>
+<p class="text-sm text-stone-600 mb-2">Quantità di calore necessaria per far aumentare di 1°C la temperatura di 1 kg (o 1 g) di sostanza.</p>
+</div>
+</div>
+
+<<<TemperatureSimulator>>>
+
+</section>
+
+<section id="exercise1" class="mb-20 max-w-5xl mx-auto">
+
+## 02. Esercizio 1: Riscaldamento dell'Acqua
+
+Calcolo del calore necessario per portare **200 grammi di acqua da 20°C a 100°C**.
+
+<<<WaterHeatingCalc>>>
+
+</section>
+
+<section id="exercise2" class="mb-20 max-w-5xl mx-auto">
+
+## 03. Esercizio 2: Fusione del Ferro
+
+Problema: abbiamo **4 kg di ferro** a 377°C e vogliamo portarlo alla temperatura di fusione (1535°C) e fonderlo completamente. Abbiamo a disposizione **4000 kJ**. È sufficiente?
+
+<<<IronFusionCalc>>>
+
+</section>
+
+<section id="exercise3" class="mb-20 max-w-5xl mx-auto">
+
+## 04. Esercizio 3: Dal Ghiaccio all'Acqua
+
+Calcolo del calore necessario per portare **0,55 kg di ghiaccio da -20°C a acqua a 20°C** attraverso tre fasi distinte.
+
+<<<IceToWaterCalc>>>
+
+</section>
+
+<section id="summary" class="mb-20 max-w-5xl mx-auto">
+
+## 05. Riepilogo e Concetti Chiave
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white rounded-xl shadow-sm p-6">
+<h3 class="font-bold text-stone-800 mb-4">📐 Formule Fondamentali</h3>
+<div class="space-y-4">
+<div class="p-3 bg-stone-50 rounded-lg">
+<div class="text-xs text-stone-600 mb-1">Calore sensibile</div>
+<div class="font-mono text-center">$$Q = C \times m \times \Delta T$$</div>
+</div>
+<div class="p-3 bg-stone-50 rounded-lg">
+<div class="text-xs text-stone-600 mb-1">Calore latente</div>
+<div class="font-mono text-center">$$Q = \lambda \times m$$</div>
+</div>
+<div class="p-3 bg-stone-50 rounded-lg">
+<div class="text-xs text-stone-600 mb-1">Conversione</div>
+<div class="font-mono text-center text-sm">1 cal = 4,186 J</div>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-6">
+<h3 class="font-bold text-stone-800 mb-4">💡 Osservazioni Chiave</h3>
+<ul class="space-y-3 text-sm text-stone-600">
+<li class="flex gap-2"><span class="text-red-500">•</span><span>Durante i cambiamenti di stato, la temperatura rimane costante mentre viene assorbito/ceduto calore</span></li>
+<li class="flex gap-2"><span class="text-red-500">•</span><span>Il calore latente di fusione del ghiaccio (334 kJ/kg) è molto maggiore rispetto a quello del ferro (33 kJ/kg)</span></li>
+<li class="flex gap-2"><span class="text-red-500">•</span><span>Il vapore acqueo a 100°C è più pericoloso dell'acqua bollente per via del calore latente immagazzinato</span></li>
+</ul>
+</div>
+</div>
+
+<div class="mt-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 border-l-4 border-red-500">
+<h3 class="font-bold text-stone-800 mb-3">📚 Conclusione</h3>
+<p class="text-stone-700 leading-relaxed">
+Abbiamo esplorato i concetti fondamentali della termodinamica attraverso tre esercizi pratici.
+Ricorda che il calore è energia in transito, mentre la temperatura è una misura dello stato termico di un corpo.
+I cambiamenti di stato richiedono energia significativa senza cambiamento di temperatura, e questo è cruciale
+per comprendere fenomeni naturali come il ciclo dell'acqua o processi industriali come la fusione dei metalli.
+</p>
+</div>
+
+</section>
