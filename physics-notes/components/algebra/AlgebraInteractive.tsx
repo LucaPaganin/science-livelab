@@ -77,11 +77,11 @@ export function FormulaCards() {
       >
         <h3 className="text-lg font-bold text-stone-800 mb-2 group-hover:text-orange-500 transition-colors">Quadrato di Binomio</h3>
         <div className="font-mono bg-stone-50 p-3 rounded text-center text-lg text-orange-800 mb-2">
-          $$(a pm b)^2 = a^2 pm 2ab + b^2$$
+          $$(a \pm b)^2 = a^2 \pm 2ab + b^2$$
         </div>
         <p className="text-sm text-stone-500">
           Attenzione al termine centrale (il doppio prodotto). Dimenticarlo è l&apos;errore più comune!
-          $(2x - 1)^2 \rightarrow 4x^2 \mathbf{- 4x} + 1$.
+          $(2x - 1)^2 \rightarrow 4x^2 - 4x + 1$.
         </p>
       </div>
 
