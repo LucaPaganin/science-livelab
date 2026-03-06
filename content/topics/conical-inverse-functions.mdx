@@ -2,14 +2,16 @@
 title: "MathLab"
 description: "Studio della circonferenza parametrica e inversione delle funzioni con grafici interattivi."
 category: "math"
-topics: ["geometria", "funzioni", "inversione"]
+topics: ["geometria", "funzioni", "inversione", "completamento quadrato"]
 difficulty: "intermediate"
-lastUpdated: "2026-02-16"
+lastUpdated: "2026-03-06"
 color: "indigo"
 icon: "◯"
 navSections:
   - id: "intro"
     label: "Introduzione"
+  - id: "circle-theory"
+    label: "Teoria"
   - id: "circle"
     label: "Circonferenza"
   - id: "inversion"
@@ -24,6 +26,80 @@ navSections:
 Benvenuti nel laboratorio interattivo. Questa applicazione sintetizza due concetti fondamentali: la manipolazione parametrica delle **circonferenze** e la teoria dell'**inversione delle funzioni**.
 
 </div>
+</section>
+
+<!-- From Lesson: Mate_260228_100143 (28 Feb 2026) -->
+<section id="circle-theory" class="mb-20 max-w-5xl mx-auto">
+
+## Teoria della Circonferenza
+
+### Le Due Forme dell'Equazione
+
+La stessa circonferenza può essere scritta in due forme equivalenti:
+
+**Forma canonica** — esplicita centro e raggio direttamente:
+
+$$
+(x - x_c)^2 + (y - y_c)^2 = r^2
+$$
+
+con centro $C = (x_c,\, y_c)$ e raggio $r$.
+
+**Forma generale (implicita)**:
+
+$$
+x^2 + y^2 + ax + by + c = 0
+$$
+
+> ⚠️ **Condizioni** affinché l'equazione rappresenti una circonferenza: i coefficienti di $x^2$ e $y^2$ devono essere **uguali** (e si normalizzano a 1) e non può esistere un termine $xy$.
+
+Le due forme sono legate da:
+
+$$
+a = -2x_c, \qquad b = -2y_c, \qquad c = x_c^2 + y_c^2 - r^2
+$$
+
+### Completamento del Quadrato: Algoritmo
+
+Il **completamento del quadrato** permette di passare dalla forma generale a quella canonica.
+
+**Idea di base**: dato $x^2 - 2kx$, vogliamo trovare il quadrato di un binomio $(x - k)^2$. Basta aggiungere e togliere $k^2$:
+
+$$
+x^2 - 2kx = (x^2 - 2kx + k^2) - k^2 = (x - k)^2 - k^2
+$$
+
+**Algoritmo** (passo per passo):
+1. Prendi il coefficiente del termine lineare in $x$: se è $-2k$, il valore da aggiungere/togliere è $k^2 = \left(\frac{\text{coeff}}{2}\right)^2$
+2. Aggiungi e togli $k^2$ nell'equazione (operazione nulla, non cambia nulla)
+3. Ripeti per $y$ se necessario
+
+#### Esempio A — $\Gamma_1 : x^2 + y^2 - 2x = 0$
+
+Il termine $-2x$ è il doppio prodotto con $k = 1$:
+
+$$
+x^2 - 2x = (x - 1)^2 - 1
+$$
+
+Sostituendo: $(x-1)^2 - 1 + y^2 = 0 \;\Rightarrow\; (x-1)^2 + y^2 = 1$
+
+✅ **Centro** $(1,\,0)$, **Raggio** $r = 1$
+
+#### Esempio B — $\Gamma_2 : x^2 + y^2 - 10x + 24 = 0$
+
+Il termine $-10x = -2 \cdot 5 \cdot x$, quindi $k = 5$ e aggiungo/tolgo $25$:
+
+$$
+x^2 - 10x = (x - 5)^2 - 25
+$$
+
+Sostituendo: $(x-5)^2 - 25 + y^2 + 24 = 0 \;\Rightarrow\; (x-5)^2 + y^2 = 1$
+
+✅ **Centro** $(5,\,0)$, **Raggio** $r = 1$
+
+Le due circonferenze $\Gamma_1$ e $\Gamma_2$ sono **congruenti** (stesso raggio), ma con centri diversi. Questa relazione geometrica è esplorata nel dettaglio nella lezione sulle [Simmetrie della Circonferenza](/topics/circle-symmetries).
+
 </section>
 
 <section id="circle" class="mb-20 max-w-5xl mx-auto">

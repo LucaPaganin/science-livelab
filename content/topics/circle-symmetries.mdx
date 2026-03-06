@@ -1,0 +1,187 @@
+---
+title: "Simmetrie della Circonferenza"
+description: "Simmetria assiale e centrale, cambio di coordinate (traslazione degli assi) e rette tangenti/secanti a una circonferenza tramite fascio di rette."
+category: "math"
+topics: ["geometria analitica", "simmetrie", "trasformazioni", "circonferenza", "cambio di coordinate"]
+difficulty: "intermediate"
+lastUpdated: "2026-03-06"
+color: "violet"
+icon: "⊙"
+sourceLessons: ["Mate_260228_100143"]
+relatedTopics: ["conical-inverse-functions"]
+navSections:
+  - id: "intro"
+    label: "Introduzione"
+  - id: "simmetria-assiale"
+    label: "Sim. Assiale"
+  - id: "simmetria-centrale"
+    label: "Sim. Centrale"
+  - id: "cambio-coordinate"
+    label: "Cambio di Coord."
+  - id: "fascio-rette"
+    label: "Fascio di Rette"
+---
+
+<!-- From Lesson: Mate_260228_100143 (28 Feb 2026) -->
+
+<section id="intro" class="mb-16 max-w-4xl mx-auto">
+<div class="bg-white rounded-2xl shadow-sm p-8 md:p-12 text-center">
+
+## Simmetrie e Trasformazioni della Circonferenza
+
+In questa lezione colleghiamo due circonferenze congruenti attraverso le **simmetrie** (assiale e centrale) e vediamo come ogni simmetria corrisponde a un **cambio di coordinate**. Infine introduciamo il metodo del **discriminante** per trovare le rette tangenti tramite un fascio parametrico.
+
+**Prerequisito**: [Teoria della circonferenza e completamento del quadrato](/topics/conical-inverse-functions#circle-theory)
+
+</div>
+</section>
+
+<section id="simmetria-assiale" class="mb-20 max-w-5xl mx-auto">
+
+## Simmetria Assiale
+
+### Definizione
+
+La **simmetria assiale** rispetto a una retta $\ell$ trasforma ogni punto $P$ nel suo riflesso $P'$ rispetto a $\ell$, come se $\ell$ fosse uno specchio.
+
+- L'asse $\ell$ rimane **fisso** punto per punto.
+- La figura e la sua immagine sono **speculari**.
+
+### Esempio: $\Gamma_1$ e $\Gamma_2$ collegate da simmetria assiale
+
+Riprendiamo le due circonferenze congruenti dalla lezione precedente:
+
+$$
+\Gamma_1 : (x - 1)^2 + y^2 = 1 \qquad C_1 = (1, 0),\; r = 1
+$$
+
+$$
+\Gamma_2 : (x - 5)^2 + y^2 = 1 \qquad C_2 = (5, 0),\; r = 1
+$$
+
+I centri sono simmetrici rispetto al **punto medio** $\left(\frac{1+5}{2}, 0\right) = (3, 0)$.
+
+Quindi la retta asse di simmetria è la **retta verticale** $x = 3$ (parallela all'asse $y$, passante per $x = 3$).
+
+La trasformazione di coordinate corrispondente è:
+
+$$
+x' = 6 - x, \qquad y' = y
+$$
+
+Sostituendo in $\Gamma_1$ si ottiene esattamente l'equazione di $\Gamma_2$, e viceversa.
+
+</section>
+
+<section id="simmetria-centrale" class="mb-20 max-w-5xl mx-auto">
+
+## Simmetria Centrale
+
+### Definizione
+
+La **simmetria centrale** rispetto a un punto $O = (a, b)$ trasforma ogni punto $P = (x, y)$ nel suo simmetrico $P' = (2a - x,\; 2b - y)$.
+
+- Solo il punto $O$ rimane **fisso**.
+- Corrisponde a una rotazione di $180°$ attorno a $O$.
+- Dal punto di vista delle coordinate, **entrambe** le coordinate cambiano segno (rispetto a $O$).
+
+> **Nota**: la simmetria centrale rispetto all'origine trasforma $(x, y) \mapsto (-x, -y)$. Per una circonferenza centrata nell'origine i termini quadratici assorbono il cambio di segno: l'equazione non cambia. Questo non vale per le parabole (che hanno termini lineari).
+
+### Esempio: centro di simmetria tra $\Gamma_1$ e $\Gamma_2$
+
+Il **punto medio** dei due centri è $P = (3, 0)$. La simmetria centrale rispetto a $P$ è:
+
+$$
+x' = 2 \cdot 3 - x = 6 - x, \qquad y' = 2 \cdot 0 - y = -y
+$$
+
+Poiché $\Gamma_1$ e $\Gamma_2$ hanno $y = 0$ come asse di simmetria, anche la simmetria centrale rispetto a $(3, 0)$ trasforma $\Gamma_1$ in $\Gamma_2$.
+
+**In generale**, per trovare il centro di simmetria tra due circonferenze congruenti con centri $C_1$ e $C_2$, basta prendere il loro punto medio.
+
+</section>
+
+<section id="cambio-coordinate" class="mb-20 max-w-5xl mx-auto">
+
+## Cambio di Coordinate: Traslazione degli Assi
+
+### Concetto
+
+Ogni simmetria corrisponde a un **cambio di coordinate**, cioè una ridefinizione degli assi nel piano.
+
+Definire nuove coordinate $(x', y')$ in funzione delle vecchie $(x, y)$:
+
+$$
+x' = x - x_0, \qquad y' = y - y_0
+$$
+
+equivale a **traslare l'origine** nel punto $(x_0, y_0)$.
+
+> ⚠️ **Attenzione (controintuitivo)**: cambiare l'espressione di $x$ significa spostare l'**asse $y$**; cambiare l'espressione di $y$ significa spostare l'**asse $x$**.
+
+### Traslazione come legame tra $\Gamma_1$ e $\Gamma_2$
+
+Se definiamo $x' = x - 4$ (cioè $x = x' + 4$), $y' = y$, e sostituiamo in $\Gamma_2$:
+
+$$
+(x'+4-5)^2 + y'^2 = 1 \;\Rightarrow\; (x'-1)^2 + y'^2 = 1
+$$
+
+Questa è esattamente $\Gamma_1$ nelle nuove coordinate! Abbiamo **traslato** il sistema di riferimento di 4 unità verso destra: le due equazioni descrivono lo stesso oggetto geometrico visto da due sistemi di riferimento diversi.
+
+### Procedura generale
+
+Dato un cambio di coordinate lineare $x' = \alpha x + \beta$, $y' = \gamma y + \delta$:
+
+1. Esprimi $x$ e $y$ in funzione di $x'$ e $y'$
+2. Sostituisci nell'equazione di partenza
+3. L'equazione risultante descrive la curva nel nuovo sistema di riferimento
+
+</section>
+
+<section id="fascio-rette" class="mb-20 max-w-5xl mx-auto">
+
+## Fascio di Rette: Tangenti e Secanti a una Circonferenza
+
+### Setup
+
+Dato un **fascio di rette** parametrizzato da $h$ (ad esempio $y = h(x - x_0) + y_0$, o in forma implicita), vogliamo trovare per quali valori di $h$ le rette del fascio sono:
+
+- **Tangenti** alla circonferenza (un unico punto di intersezione)
+- **Secanti** (due punti di intersezione)
+- **Esterne** (nessun punto di intersezione)
+
+### Metodo del Discriminante
+
+**Passo 1** — Porta l'equazione della retta nella forma $x = \ldots$ (o $y = \ldots$) in funzione dell'altra variabile e di $h$.
+
+**Passo 2** — Sostituisci nell'equazione della circonferenza: ottieni un'equazione di secondo grado in una sola variabile, con coefficienti che dipendono da $h$.
+
+$$
+Ax^2 + Bx + C = 0 \quad \text{con } A, B, C = f(h)
+$$
+
+**Passo 3** — Calcola il discriminante $\Delta(h) = B^2 - 4AC$.
+
+**Passo 4** — Studia il segno di $\Delta(h)$:
+
+| Condizione | Tipo di intersezione |
+|---|---|
+| $\Delta(h) > 0$ | Retta **secante** (2 punti) |
+| $\Delta(h) = 0$ | Retta **tangente** (1 punto, doppio) |
+| $\Delta(h) < 0$ | Retta **esterna** (0 punti) |
+
+Ponendo $\Delta(h) = 0$ trovi un'equazione di secondo grado in $h$: le sue soluzioni sono i **valori tangenti**.
+
+### Esempio schematico
+
+Data la circonferenza con centro $(-1, y_c)$ e $r = \sqrt{2}$, e un fascio con parametro $h$:
+
+1. Si sostituisce la retta nella circonferenza → equazione di 2° grado in $y$ (o $x$) con $\Delta = \Delta(h)$
+2. $\Delta(h)$ è un polinomio di 2° grado in $h$
+3. Le radici di $\Delta(h) = 0$ danno i valori di $h$ per cui la retta è tangente (es. $h = -1$ e $h = 5/7$)
+4. Per $h < -1$ o $h > 5/7$: rette secanti; per $-1 < h < 5/7$: rette esterne
+
+> **Confronto con la parabola**: lo stesso metodo si applica alle parabole (visto nelle lezioni precedenti). La differenza è che per il fascio con la parabola occorre prima scrivere il fascio esplicitamente ($y = mx + q$), mentre con la circonferenza il fascio può già essere fornito in forma implicita.
+
+</section>
